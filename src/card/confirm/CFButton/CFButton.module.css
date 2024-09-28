@@ -1,0 +1,27 @@
+.CFButton{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    width: 250rem;
+    height: 100rem;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10rem;
+    font-size: 10rem;
+}
+.yes,.no{        
+    width: 40rem;
+    height: 20rem;
+    border-radius: 10rem;
+    background-color: transparent;
+    color: white;
+    border: solid 1px ;
+    cursor: pointer;
+}
+.yes{
+}

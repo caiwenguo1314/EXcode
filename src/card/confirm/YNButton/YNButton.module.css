@@ -1,0 +1,67 @@
+.YNButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  
+  font-size: 18rem;
+  border-radius: 10rem;
+  border: solid 1rem rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, .1);
+  color: black;
+  margin-top: 50rem;
+}
+.YNButton span {
+  margin-left: 30rem;
+}
+.YNButton__mean {
+  font-size: 16rem;
+}
+.YNButton__button{
+  display: flex;
+}
+.YNButton__button__yes,
+.YNButton__button__no {
+  width: 90rem;
+  height: 35rem;
+  background-color: rgb(193, 193, 193);
+  font-size: 20rem;
+  cursor: pointer;
+  border: none;
+}
+.YNButton__button__yes {
+  border-top-left-radius: 20rem;
+  border-bottom-left-radius: 20rem;
+}
+.YNButton__button__no {
+  border-top-right-radius: 20rem;
+  border-bottom-right-radius: 20rem;
+  margin-right: 50rem;
+}
+.YNButton__button__yes:active,
+.YNButton__button__no:active {
+  border-color: red;
+  color: red;
+  font-weight: bold;
+}
+/* .YNButton__button__yes:hover,
+.YNButton__button__no:hover {
+  background-color: rgb(193, 193, 193);
+  color:red;
+  font-weight: bold;
+} */
+.YNButton__button__yes__active{
+  color:red;
+  background-color: rgb(235, 202, 202);
+  font-weight: bold;
+  border: solid 1rem;
+}
+.YNButton__button__no__active{
+  color:red;
+  background-color: rgb(235, 202, 202);
+  font-weight: bold;
+  border: solid 1rem;
+}
+.stateText{
+  font-size: 22rem;
+}
