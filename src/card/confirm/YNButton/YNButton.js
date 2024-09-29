@@ -1,7 +1,14 @@
 import React from "react";
 import classes from "./YNButton.module.css";
 
-export default function YNButton({ deduction, setDeduction, setOpen }) {
+export default function YNButton({ showBackdrop, setShowBackdrop, confirm, setConfirm }) {
+  const clickYesHandler = () => {
+    !confirm && setShowBackdrop(!showBackdrop);
+  }
+  
+  const clickNoHandler = () => {
+    setConfirm(false)
+  }
   return (
     <div>
       <div className={classes.YNButton}>
@@ -15,25 +22,21 @@ export default function YNButton({ deduction, setDeduction, setOpen }) {
         </div>
         <div className={classes.YNButton__button}>
           <button
-            className={`${classes.YNButton__button__yes} ${
-              deduction ? classes.YNButton__button__yes__active : ""
-            }`}
-            onClick={null}
+            className={`${classes.YNButton__button__yes} ${confirm&&classes.confirm} `}
+            onClick={clickYesHandler}
           >
             Yes
           </button>
           <button
-            className={`${classes.YNButton__button__no} ${
-              !deduction ? classes.YNButton__button__no__active : ""
-            }`}
-            onClick={null}
+            className={`${classes.YNButton__button__no} `}
+            onClick={clickNoHandler}
           >
             {" "}
             No
           </button>
         </div>
       </div>
-      {deduction && <div className={classes.stateText}>你点我了</div>}
+      {confirm && <div className={classes.stateText}>你点我了</div>}
     </div>
   );
 }

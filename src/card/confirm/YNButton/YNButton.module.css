@@ -50,7 +50,7 @@
   color:red;
   font-weight: bold;
 } */
-.YNButton__button__yes__active{
+.confirm{
   color:red;
   background-color: rgb(235, 202, 202);
   font-weight: bold;
