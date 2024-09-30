@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/EXcode/static/css/main.5936ee05.css",
+    "main.js": "/EXcode/static/js/main.69b95b0d.js",
+    "index.html": "/EXcode/index.html",
+    "main.5936ee05.css.map": "/EXcode/static/css/main.5936ee05.css.map",
+    "main.69b95b0d.js.map": "/EXcode/static/js/main.69b95b0d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5936ee05.css",
+    "static/js/main.69b95b0d.js"
+  ]
+}
