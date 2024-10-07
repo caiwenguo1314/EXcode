@@ -11,9 +11,40 @@ export default function Home() {
 
   return (
     <div>
-      <RButton showBackdrop={showBackdrop} setShowBackdrop={setShowBackdrop} confirm={confirm} setConfirm={setConfirm}/>
-      <YNButton showBackdrop={showBackdrop} setShowBackdrop={setShowBackdrop} confirm={confirm} setConfirm={setConfirm}/>
-      {showBackdrop && <Backdrop confirm={confirm} setConfirm={setConfirm} showBackdrop={showBackdrop} setShowBackdrop={setShowBackdrop}/>}
+      <RButton
+        showBackdrop={showBackdrop}
+        setShowBackdrop={setShowBackdrop}
+        confirm={confirm}
+        setConfirm={setConfirm}
+      />
+      <YNButton
+        showBackdrop={showBackdrop}
+        setShowBackdrop={setShowBackdrop}
+        confirm={confirm}
+        setConfirm={setConfirm}
+      />
+      {showBackdrop && (
+        <Backdrop
+          confirm={confirm}
+          setConfirm={setConfirm}
+          showBackdrop={showBackdrop}
+          setShowBackdrop={setShowBackdrop}
+        />
+      )}
+      <YNButton />
+      <YNButton />
+      <YNButton />
+      <YNButton />
+      <YNButton />
+      <YNButton />
+      <YNButton />
+      <YNButton />
+      <YNButton />
+      <YNButton />
+      <YNButton />
+      <YNButton />
+      <YNButton />
+      <YNButton />
     </div>
   );
 }
