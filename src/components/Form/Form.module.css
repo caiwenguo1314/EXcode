@@ -1,0 +1,88 @@
+/* Form.module.css */
+body {
+    /* 设置字体为Arial或sans-serif */
+    font-family: Arial, sans-serif;
+    /* 设置背景颜色为#f4f4f4 */
+    background-color: #f4f4f4;
+    /* 设置顶部外边距为100rem */
+    margin-top: 100rem;
+    /* 设置内边距为0 */
+    padding: 0;
+    /* 设置为弹性布局 */
+    display: flex;
+    /* 水平居中 */
+    justify-content: center;    
+    /* 设置高度为100vh */
+    height: 100vh;
+}
+
+.container {
+    /* 设置为弹性布局 */
+    display: flex;
+    /* 设置背景颜色为#fff */
+    background-color: #fff;
+    /* 设置内边距为40rem */
+    padding: 40rem;
+    /* 设置边框圆角为20rem */
+    border-radius: 20rem;
+    /* 设置阴影 */
+    box-shadow: 0 0 20rem rgba(0, 0, 0, 0.1);
+    /* 设置宽度为300px */
+    width: 500rem;
+    /* 水平居中 */
+    justify-content: center;
+}
+
+.container h2 {
+    /* 设置文本居中 */
+    text-align: center;    
+}
+
+.container form {
+    /* 设置为弹性布局 */
+    display: flex;
+    /* 设置主轴方向为垂直 */
+    flex-direction: column;
+}
+
+.container input {
+    /* 设置元素底部外边距为10像素 */
+    margin-bottom: 10px;
+    /* 设置内边距为10像素 */
+    padding: 10px;
+    /* 设置边框为1像素实线，颜色为#ccc */
+    border: 1px solid #ccc;
+    /* 设置边框圆角为4像素 */
+    border-radius: 4px;
+}
+
+.container button {
+    /* 设置内边距为10像素 */
+    padding: 10px;
+    /* 设置边框为无 */
+    border: none;
+    /* 设置边框圆角为4像素 */
+    border-radius: 4px;
+    /* 设置背景颜色为#007bff */
+    background-color: #007bff;
+    /* 设置文字颜色为白色 */
+    color: white;
+    /* 设置鼠标悬停时为手型 */
+    cursor: pointer;
+    /* 设置顶部外边距为10像素 */
+    margin-top: 10px;
+}
+
+.container button:hover {
+    /* 设置鼠标悬停时背景颜色为#0056b3 */
+    background-color: #0056b3;
+}
+
+.container .error-message {
+    /* 设置文字颜色为红色 */
+    color: red;
+    /* 设置文本居中 */
+    text-align: center;
+    /* 设置元素底部外边距为10像素 */
+    margin-bottom: 10px;
+}

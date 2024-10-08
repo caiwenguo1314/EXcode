@@ -30,21 +30,7 @@ export default function Home() {
           showBackdrop={showBackdrop}
           setShowBackdrop={setShowBackdrop}
         />
-      )}
-      <YNButton />
-      <YNButton />
-      <YNButton />
-      <YNButton />
-      <YNButton />
-      <YNButton />
-      <YNButton />
-      <YNButton />
-      <YNButton />
-      <YNButton />
-      <YNButton />
-      <YNButton />
-      <YNButton />
-      <YNButton />
+      )}     
     </div>
   );
 }
