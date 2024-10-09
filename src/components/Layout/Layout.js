@@ -4,8 +4,7 @@ import MainMenu from '../MainMenu/MainMenu'
 export default function Layout(props) {
   return (
     <div>
-      <MainMenu/>
-      <hr/>
+      <MainMenu/>      
       {props.children}
     </div>
   )

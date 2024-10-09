@@ -32,12 +32,6 @@ body {
     /* 水平居中 */
     justify-content: center;
 }
-
-.container h2 {
-    /* 设置文本居中 */
-    text-align: center;    
-}
-
 .container form {
     /* 设置为弹性布局 */
     display: flex;

@@ -19,7 +19,7 @@ function App() {
 
           <Route exact path="/form" element={<Form />} />
           {/* 定义一个路径为"*"的路由，当路径不匹配时，重定向到"/" */}
-          {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
+          <Route path="*" element={<Navigate to="/form" replace />} />
         </Routes>
       </Layout>
     </div>
