@@ -25,19 +25,23 @@ export default function Form() {
         <div className={classes.container}>
             <form onSubmit={submitHandler}>
                 <div>
+                    <h2>用户名</h2>
                     <input ref={usernameInp} type="text" placeholder={'用户名'} />
                 </div>
                 {!isLoginForm && (
                     <div>
+                        <h2>电子邮件</h2>
+
                         <input ref={emailInp} type="email" placeholder={'电子邮件'} />
-                    </div>
-                )}
+                    </div>)
+                }
                 <div>
+                    <h2>密码</h2>
                     <input ref={pwdInp} type="password" placeholder={'密码'} />
                 </div>
-                <div>
-                    <button>{isLoginForm ? "登录" : '注册'}</button>
-                    <button onClick={(event) => {
+                <div className={classes.btns}>
+                    <button className={classes.login}>{isLoginForm ? "登录" : '注册'}</button>
+                    <button className={classes.register} onClick={(event) => {
                         event.preventDefault()
                         setIsLoginForm(prevState => !prevState)
 

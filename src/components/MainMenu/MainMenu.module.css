@@ -1,24 +1,33 @@
-.MainMenu{
-    font-size: 22rem;  
-    position: fixed; /* 固定在顶部 */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333; /* 导航条背景色 */
-    color: white; /* 文字颜色 */
-    z-index: 1000; /* 确保导航条在最上层 */
-/* 设置盒子的阴影效果，水平偏移量为0，垂直偏移量为2px，模糊半径为4px，颜色为rgba(0, 0, 0, 0.1) */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+.MainMenu {
+  display: flex;
+  font-size: 22rem;
+  position: fixed; /* 固定在顶部 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* 导航条背景色 */
+  color: white; /* 文字颜色 */
+  z-index: 1000; /* 确保导航条在最上层 */
+  /* 设置盒子的阴影效果，水平偏移量为0，垂直偏移量为2px，模糊半径为4px，颜色为rgba(0, 0, 0, 0.1) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 .MainMenu ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    overflow: hidden;
-  }
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+}
 .MainMenu li {
-    margin-right: 10px; /* 根据需要调整间距 */
+  margin-right: 10px; /* 根据需要调整间距 */
+}
+@media (max-width: 768px) {
+  .MainMenu {
+    font-size: 32rem;
+
+    height: 60rem;
   }
+}
