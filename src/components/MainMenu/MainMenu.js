@@ -10,11 +10,11 @@ export default function MainMenu() {
           <Link to={"/"}>首页</Link>
         </li>
         <li>
-          <Link to={"/form"}>登录/注册</Link>
+          <Link to={"/LoginForm"}>登录/注册</Link>
         </li>
         {
           <li>
-            <Link to={"/profile"}>用户信息</Link>
+            <Link to={"/ProfileForm"}>用户信息</Link>
           </li>
         }
       </ul>
