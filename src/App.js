@@ -2,8 +2,9 @@ import Layout from "./components/Layout/Layout";
 import "./App.css";
 import TopMenu from "./UI/TopMenu/TopMenu";
 import Home from "./components/Home/Home";
-import Form from './components/Form/Form'
+import Form from './components/Form/LoginForm/Form'
 import { Route, Routes, Navigate, } from "react-router-dom";
+import ProfileForm from "./components/Form/ProfileForm/ProfileForm";
 
 // 定义一个名为App的函数组件
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
 
           <Route exact path="/form" element={<Form />} />
+          <Route exact path="/profile" element={<ProfileForm />} />
           {/* 定义一个路径为"*"的路由，当路径不匹配时，重定向到"/" */}
           <Route path="*" element={<Navigate to="/form" replace />} />
         </Routes>

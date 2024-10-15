@@ -8,6 +8,8 @@ export default function Form() {
 
 
     const usernameInp = useRef()
+   
+    
     console.log(usernameInp)
     const emailInp = useRef()
     const pwdInp = useRef()
@@ -20,6 +22,7 @@ export default function Form() {
         const password = pwdInp.current.value
 
     }
+    
 
     return (
         <div className={classes.container}>
