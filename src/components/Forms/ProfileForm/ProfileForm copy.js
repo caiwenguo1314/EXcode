@@ -1,16 +1,33 @@
 import React from 'react';
 import { Form, Input, Button, Select, Radio, Rate, Checkbox } from 'antd';
 
+const { Option } = Select;
 
-
-export default function ProfileForm() {
-
-
+// 定义一个SurveyForm组件
+const SurveyForm = () => {
+  // 定义表单提交的回调函数
+  const onFinish = (values) => {
+    console.log('Form values:', values);
+  };
 
   return (
-    <div>
-          <Form
-
+    <Form
+      // 设置表单布局为垂直
+      layout="vertical"
+      // 设置表单提交的回调函数
+      onFinish={onFinish}
+      // 设置表单的初始值
+      initialValues={{
+        gender: 'male',
+        education: 'bachelor',
+        skills: {
+          professional: 3,
+          computer: 3,
+          leadership: 3,
+          timeManagement: 3,
+          communication: 3,
+        },
+      }}
     >
       {/* 1. 基本信息 */}
       <h2>1. 基本信息</h2>
@@ -52,11 +69,11 @@ export default function ProfileForm() {
 
       <Form.Item label="最高学历" name="education">
         <Select>
-          {/* <Option value="highschool">高中</Option>
+          <Option value="highschool">高中</Option>
           <Option value="associate">专科</Option>
           <Option value="bachelor">本科</Option>
           <Option value="master">硕士</Option>
-          <Option value="doctor">博士</Option> */}
+          <Option value="doctor">博士</Option>
         </Select>
       </Form.Item>
 
@@ -179,7 +196,7 @@ export default function ProfileForm() {
         </Button>
       </Form.Item>
     </Form>
+  );
+};
 
-    </div>
-  )
-}
+export default SurveyForm;
