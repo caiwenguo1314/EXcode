@@ -46,6 +46,8 @@ export default function ProfileForm() {
             communication: 3,
           },
         }}
+// 设置样式，最大宽度为600，居中显示
+        style={{ maxWidth: 350, margin: "0 auto" }}
       >
         <Form.Item
           label="姓名"
