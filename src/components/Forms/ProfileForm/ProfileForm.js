@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Input, Radio, Select, Rate, Checkbox, Button } from "antd";
+import { Form, Input, Radio, Select, Rate, Checkbox, Button, Pagination } from "antd";
 import { useState } from "react";
 export default function ProfileForm() {
   const [FormData, setFormData] = useState([]);
@@ -46,7 +46,7 @@ export default function ProfileForm() {
             communication: 3,
           },
         }}
-// 设置样式，最大宽度为600，居中显示
+        // 设置样式，最大宽度为600，居中显示
         style={{ maxWidth: 350, margin: "0 auto" }}
       >
         <Form.Item
@@ -255,6 +255,7 @@ export default function ProfileForm() {
           </Button>
         </Form.Item>
       </Form>
+      <Pagination defaultCurrent={1} pageSizeOptions={5} total={50} />
     </div>
   );
 }
