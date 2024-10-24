@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Form, Input, Radio, Select, Rate, Checkbox, Button, Pagination } from "antd";
+import { Form, Input, Radio, Select, Rate, Checkbox, Button, Pagination, Layout } from "antd";
 
 const { Option } = Select;
-
+const { Footer, Content } = Layout;
 const formItems = [
   {
     label: "姓名",
@@ -198,6 +198,15 @@ const formItems = [
       </Radio.Group>
     ),
   },
+  {
+    label: "",
+    name: "Button",
+    component: (
+      <Button type="primary" htmlType="button">
+        提交
+      </Button>
+    ),
+  }
 ];
 const PAGE_SIZE = 8;
 export default function ProfileForm() {
@@ -224,50 +233,60 @@ export default function ProfileForm() {
     // 打印提交成功的消息和表单数据
     console.log("提交成功！", values);
   };
- // 计算总条目数
+  // 计算总条目数
   const totalItems = formItems.length;
- // 计算总页数
+  // 计算总页数
   const totalPages = Math.ceil(totalItems / PAGE_SIZE);
- // 计算当前页的起始索引
+  // 计算当前页的起始索引
   const startIndex = (currentPage - 1) * PAGE_SIZE;
- // 计算当前页的条目
+  // 计算当前页的条目
   const currentItems = formItems.slice(startIndex, startIndex + PAGE_SIZE);
 
 
   return (
     <div>
-      <Form
-        layout="vertical"
-        onFinish={onFinish}
-        initialValues={{
-          gender: "male",
-          education: "bachelor",
-          skills: {
-            professional: 3,
-            computer: 3,
-            leadership: 3,
-            timeManagement: 3,
-            communication: 3,
-          },
-        }}
-        style={{ maxWidth: 350, margin: "0 auto" }}
-      >
-        {currentItems.map((item) => (
-          <Form.Item key={item.name} label={item.label} name={item.name} rules={item.rules}>
-            {item.component}
-          </Form.Item>
-        ))}
-
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            提交
-          </Button>
-        </Form.Item>
-      </Form>
-      <Pagination current={currentPage}
-        pageSize={PAGE_SIZE}
-        total={totalItems}
-        onChange={(page) => setCurrentPage(page)} />
+      <Layout style={{ minHeight: '100vh' }}>
+        <Form
+          layout="vertical"
+          onFinish={onFinish}
+          initialValues={{
+            gender: "male",
+            education: "bachelor",
+            skills: {
+              professional: 3,
+              computer: 3,
+              leadership: 3,
+              timeManagement: 3,
+              communication: 3,
+            },
+          }}
+          style={{ maxWidth: 300, margin: "0 auto" }}
+        >
+          {currentItems.map((item) => (
+            <Form.Item key={item.name} label={item.label} name={item.name} rules={item.rules}>
+              {item.component}
+            </Form.Item>
+          ))}
+        </Form>
+        <Footer style={{ textAlign: 'center' }}>
+          <Pagination style={{
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            background: '#fff',
+            padding: '10px',
+            textAlign: 'center',
+            boxShadow: '0 -1px 5px rgba(0,0,0,0.1)',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+            current={currentPage}
+            pageSize={PAGE_SIZE}
+            total={totalItems}
+            onChange={(page) => setCurrentPage(page)} />
+        </Footer>
+      </Layout>
     </div>
   );
 }
