@@ -16,11 +16,11 @@ function App() {
         {/* 渲染Routes组件 */}
         <Routes>
           {/* 定义一个路径为"/"的路由，当路径匹配时，渲染Home组件 */}
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/Home" element={<Home />} />
           <Route exact path="/ProfileForm" element={<ProfileForm />} />
           <Route exact path="/LoginForm" element={<LoginForm />} />
           {/* 定义一个路径为"*"的路由，当路径不匹配时，重定向到"/" */}
-          {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
+          <Route path="*" element={<Navigate to="/Home" replace />} />
         </Routes>
       </Layout>
     </div>
