@@ -20,7 +20,7 @@ function App() {
           <Route exact path="/ProfileForm" element={<ProfileForm />} />
           <Route exact path="/LoginForm" element={<LoginForm />} />
           {/* 定义一个路径为"*"的路由，当路径不匹配时，重定向到"/" */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
         </Routes>
       </Layout>
     </div>
