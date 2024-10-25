@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/EXcode/static/css/main.591a8acb.css",
-    "main.js": "/EXcode/static/js/main.c6da20b8.js",
+    "main.js": "/EXcode/static/js/main.39b6607e.js",
     "index.html": "/EXcode/index.html",
     "main.591a8acb.css.map": "/EXcode/static/css/main.591a8acb.css.map",
-    "main.c6da20b8.js.map": "/EXcode/static/js/main.c6da20b8.js.map"
+    "main.39b6607e.js.map": "/EXcode/static/js/main.39b6607e.js.map"
   },
   "entrypoints": [
     "static/css/main.591a8acb.css",
-    "static/js/main.c6da20b8.js"
+    "static/js/main.39b6607e.js"
   ]
 }
